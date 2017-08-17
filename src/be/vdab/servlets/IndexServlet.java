@@ -1,6 +1,8 @@
 package be.vdab.servlets;
 
+import be.vdab.entities.Adres;
 import be.vdab.entities.begroeting;
+import be.vdab.entities.persoon;
 
 import javax.servlet.http.HttpServlet;
 import java.io.IOException;
@@ -13,6 +15,9 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
 
         request.setAttribute("begroeting", new begroeting());
+        request.setAttribute("zaakvoerder",
+                new persoon("Mike", "Dhoore", 1, true,
+                        new Adres("Gavermolenstraat", "71", "9111", "Belsele")));
         request.getRequestDispatcher(VIEW).forward(request, response);
     }
 }

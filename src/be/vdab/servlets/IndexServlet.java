@@ -1,8 +1,9 @@
 package be.vdab.servlets;
 
+import be.vdab.entities.begroeting;
+
 import javax.servlet.http.HttpServlet;
 import java.io.IOException;
-import java.time.LocalDateTime;
 
 public class IndexServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -11,8 +12,7 @@ public class IndexServlet extends HttpServlet {
     @Override
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
 
-        int uur = LocalDateTime.now().getHour();
-        request.setAttribute("begroeting", uur >= 6 && uur < 12 ? "Goede morgen deze morgen" : uur >= 12 && uur < 18 ? "Goede middag" : "Goede avond");
+        request.setAttribute("begroeting", new begroeting());
         request.getRequestDispatcher(VIEW).forward(request, response);
     }
 }

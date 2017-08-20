@@ -12,7 +12,7 @@
 <body>
 <c:import url="/WEB-INF/JSP/menu.jsp"/>
 <h1>pizza Luigi</h1>
-<img src="../../images/pizza.jpg" alt="Pizza" class="fullwidth">
+<img src="<c:url value="/images/pizza.jpg"/>" alt="Pizza" class="fullwidth">
 <h2>${begroeting}</h2>
 <h3>De zaakvoerder :</h3>
 <dl>

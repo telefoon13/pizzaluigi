@@ -27,7 +27,8 @@
     <dd>${zaakvoerder.adres.postcode} ${zaakvoerder.adres.gemeente}</dd>
 </dl>
 <footer style="text-align: center">
-    Deze pagina werd <b>${aantalKeerBekeken}</b>X bekeken.
+    <div>Deze pagina werd <b>${aantalKeerBekeken}</b>X bekeken.</div>
+    <div>Webmaster : <a href="mailto:${emailAdresWebmaster}">${emailAdresWebmaster}</a></div>
 </footer>
 </body>
 </html>

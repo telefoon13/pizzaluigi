@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-@WebServlet("/pizzas.htm")
+@WebServlet(urlPatterns = "/pizzas.htm", name = "PizzaServlet")
 public class PizzasServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

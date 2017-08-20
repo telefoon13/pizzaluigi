@@ -1,15 +1,16 @@
 <jsp:useBean id="zaakvoerder" scope="request" type="be.vdab.entities.persoon"/>
 <jsp:useBean id="begroeting" scope="request" type="be.vdab.entities.begroeting"/>
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@page contentType='text/html' pageEncoding='UTF-8' session='false' %>
+<%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <!doctype html>
 <html lang="nl">
 <head>
-    <title>Pizza Luigi</title>
-    <link rel="icon" href="../../images/favicon.ico">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="../../styles/default.css">
+    <c:import url="/WEB-INF/JSP/head.jsp">
+        <c:param name="title" value="Pizza Luigi"/>
+    </c:import>
 </head>
 <body>
+<c:import url="/WEB-INF/JSP/menu.jsp"/>
 <h1>pizza Luigi</h1>
 <img src="../../images/pizza.jpg" alt="Pizza" class="fullwidth">
 <h2>${begroeting}</h2>

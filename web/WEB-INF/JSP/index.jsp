@@ -26,5 +26,8 @@
     <dd>${zaakvoerder.adres.straat} ${zaakvoerder.adres.huisnummer}</dd>
     <dd>${zaakvoerder.adres.postcode} ${zaakvoerder.adres.gemeente}</dd>
 </dl>
+<footer style="text-align: center">
+    Deze pagina werd <b>${aantalKeerBekeken}</b>X bekeken.
+</footer>
 </body>
 </html>

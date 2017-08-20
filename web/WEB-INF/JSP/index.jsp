@@ -1,4 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="zaakvoerder" scope="request" type="be.vdab.entities.persoon"/>
+<jsp:useBean id="begroeting" scope="request" type="be.vdab.entities.begroeting"/>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!doctype html>
 <html lang="nl">
 <head>

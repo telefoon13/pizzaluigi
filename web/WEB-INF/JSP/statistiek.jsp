@@ -13,10 +13,17 @@
 <dl>
     <dt>Welkom</dt>
     <dd>${indexRequests}</dd>
-    <dt>Pizza's</dt>
+    <dt>Pizza's lijst</dt>
     <dd>${pizzaRequests}</dd>
+    <dt>Pizza's Detail</dt>
+    <dd>${pizzaDetailRequests}</dd>
     <dt>Statistieken</dt>
     <dd>${statistiekRequests}</dd>
+    <dt>Tussen prijzen</dt>
+    <dd>${pizzasTussenPrijzenDetailRequests}</dd>
+    <dt>Voorkeur Pizza's</dt>
+    <dd>${voorkeurPizzasRequests}</dd>
+
 </dl>
 </body>
 </html>

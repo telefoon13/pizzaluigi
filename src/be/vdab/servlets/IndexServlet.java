@@ -29,7 +29,7 @@ public class IndexServlet extends HttpServlet {
 
 		request.setAttribute("aantalKeerBekeken", aantalKeerBekeken.incrementAndGet());
 
-		request.setAttribute("emailAdresWebmaster", this.getServletContext().getInitParameter("emailAdresWebmaster"));
+		request.setAttribute("email AdresWebmaster", this.getServletContext().getInitParameter("emailAdresWebmaster"));
 
 		((AtomicInteger) this.getServletContext().getAttribute(INDEX_REQUESTS)).incrementAndGet();
 

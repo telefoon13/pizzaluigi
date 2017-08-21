@@ -38,7 +38,7 @@ public class PizzasTussenPrijzenServlet extends HttpServlet {
 			try {
 				tot = new BigDecimal(request.getParameter("tot"));
 			} catch (NullPointerException | NumberFormatException ex) {
-				fouten.put("totn", "tik een getal");
+				fouten.put("tot", "tik een getal");
 			}
 			if (fouten.isEmpty()) {
 				request.setAttribute("pizzas", pizzaRepository.findByPriceBetween(van, tot));

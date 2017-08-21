@@ -23,11 +23,11 @@
 <c:if test="${not empty pizzas}">
     <ul class="zebra">
         <c:forEach var="pizza" items="${pizzas}">
-            <li>${pizza.id}: <c:out value="${pizza.naam}"/> €${pizza.prijs}
+            <li>${pizza.id} : <c:out value="${pizza.naam}"/> €${pizza.prijs}
                 <c:if test="${pizza.pikant}">
                     <img src="../../images/chili.png" width="12" height="12">
                 </c:if>
-                <c:url value="pizzas/detail.htm" var="detailURL">
+                <c:url value="detail.htm" var="detailURL">
                     <c:param name="id" value="${pizza.id}"/>
                 </c:url>
                 <a href="${detailURL}">Detail</a>

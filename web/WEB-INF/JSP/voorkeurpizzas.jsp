@@ -29,7 +29,7 @@
                     <c:if test="${pizza.pikant}">
                         <img src="../../images/chili.png" width="12" height="12">
                     </c:if>
-                    <c:url value="pizzas/detail.htm" var="detailURL">
+                    <c:url value="detail.htm" var="detailURL">
                         <c:param name="id" value="${pizza.id}"/>
                     </c:url>
                     <a href="${detailURL}">Detail</a>

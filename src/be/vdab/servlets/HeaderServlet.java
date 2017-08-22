@@ -42,6 +42,8 @@ public class HeaderServlet extends HttpServlet {
 		}
 		request.setAttribute("headers", headers);
 
+		((AtomicInteger) this.getServletContext().getAttribute(HEADERS_REQUESTS)).incrementAndGet();
+
 		request.getRequestDispatcher(VIEW).forward(request, response);
 
 	}

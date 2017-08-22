@@ -18,7 +18,7 @@ public class PizzasTussenPrijzenServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	private static final String VIEW = "/WEB-INF/JSP/pizzatussenprijzen.jsp";
-	private static final String PIZZASTUSSENPRIJZEN_REQUESTS = "pizzasTussenPrijzenDetailRequests";
+	private static final String PIZZASTUSSENPRIJZEN_REQUESTS = "pizzasTussenPrijzenRequests";
 	private final PizzaRepository pizzaRepository = new PizzaRepository();
 
 	@Override

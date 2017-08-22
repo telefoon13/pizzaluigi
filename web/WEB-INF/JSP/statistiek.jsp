@@ -20,9 +20,11 @@
     <dt>Statistieken</dt>
     <dd>${statistiekRequests}</dd>
     <dt>Tussen prijzen</dt>
-    <dd>${pizzasTussenPrijzenDetailRequests}</dd>
+    <dd>${pizzasTussenPrijzenRequests}</dd>
     <dt>Voorkeur Pizza's</dt>
     <dd>${voorkeurPizzasRequests}</dd>
+    <dt>Pizza toevoegen</dt>
+    <dd>${pizzaToevoegenRequests}</dd>
 
 </dl>
 </body>

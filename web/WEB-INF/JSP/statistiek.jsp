@@ -25,6 +25,8 @@
     <dd>${voorkeurPizzasRequests}</dd>
     <dt>Pizza toevoegen</dt>
     <dd>${pizzaToevoegenRequests}</dd>
+    <dt>Headers</dt>
+    <dd>${headersRequests}</dd>
 
 </dl>
 </body>

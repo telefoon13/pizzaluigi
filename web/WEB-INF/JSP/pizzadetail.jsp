@@ -28,6 +28,17 @@
             <dd>${pizza.prijs}</dd>
             <dt>Pikant :</dt>
             <dd>${pizza.pikant ? "Ja" : "Neen"}</dd>
+            <dt>Foto :</dt>
+            <c:choose>
+                <c:when test="${pizzaIdsMetFoto.contains(pizza.id)}">
+                    <c:url value="/pizzafotos/${pizza.id}.jpg" var="fotoURL"/>
+                    <img src="${fotoURL}" alt="Foto van een ${pizza.naam} pizza"/>
+                </c:when>
+                <c:otherwise>
+                    <img src="/pizzafotos/no-image.jpg" alt="Geen afbeelding"/>
+                </c:otherwise>
+            </c:choose>
+            <dd>
         </dl>
     </c:otherwise>
 </c:choose>

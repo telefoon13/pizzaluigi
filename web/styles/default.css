@@ -92,7 +92,9 @@ ul.zebra li {
     padding-left: 0.5em;
     padding-bottom: 0.1em;
     padding-top: 0.1em;
+    display: block;
 }
+
 
 ul.zebra li:nth-child(odd) {
     background-color: #F2F2E4;
@@ -104,4 +106,44 @@ ul.zebra li:nth-child(even) {
 
 ul.zebra li:nth-child(odd):hover, ul.zebra li:nth-child(even):hover {
     background-color: #ccff00;
+}
+
+.pizzalijst {
+    float: left;
+    display: inline;
+    padding-left: 1px;
+    width: 300px;
+    vertical-align: middle;
+    font-size: 1.2em;
+}
+
+.pizzalijstPikant {
+    float: left;
+    display: inline;
+    padding-left: 1px;
+    width: 250px;
+    vertical-align: middle;
+    font-size: 1.2em;
+}
+
+.pizzalijstSmall {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    float: left;
+    display: inline;
+    padding-left: 1px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.pizzalijstSmall:last-child {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    float: none;
+    display: inline;
+    padding-left: 1px;
+    width: 50px;
+    vertical-align: middle;
 }

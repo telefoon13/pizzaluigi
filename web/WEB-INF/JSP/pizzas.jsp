@@ -16,14 +16,36 @@
 </h1>
 <ul class="zebra">
     <c:forEach var="pizza" items="${pizzas}">
-        <li>${pizza.id}: <c:out value="${pizza.naam}"/> €${pizza.prijs}
-            <c:if test="${pizza.pikant}">
-                <img src="../../images/chili.png" width="12" height="12">
-            </c:if>
+        <li>
+            <div class="pizzalijstSmall">
+                <c:choose>
+                    <c:when test="${pizzaIdsMetFoto.contains(pizza.id)}">
+                        <img src="../../pizzafotos/${pizza.id}.jpg" border="0" alt="${pizza.naam}" width="25"
+                             height="25">
+                    </c:when>
+                    <c:otherwise>
+                        <img src="../../pizzafotos/no-image.jpg" border="0" alt="No image" width="25" height="25">
+                    </c:otherwise>
+                </c:choose>
+            </div>
+
+            <c:choose>
+                <c:when test="${pizza.pikant}">
+                    <div class="pizzalijstPikant"><c:out value="${pizza.naam}"/></div>
+                    <div class="pizzalijstSmall"><img src="../../images/chili.png" width="25" height="25"></div>
+                </c:when>
+                <c:otherwise>
+                    <div class="pizzalijst"><c:out value="${pizza.naam}"/></div>
+                </c:otherwise>
+            </c:choose>
+
+            <div class="pizzalijstSmall">€${pizza.prijs}</div>
+
             <c:url value="pizzas/detail.htm" var="detailURL">
                 <c:param name="id" value="${pizza.id}"/>
             </c:url>
-            <a href="${detailURL}">Detail</a>
+            <div class="pizzalijstSmall"><a href="${detailURL}"><img src="../../images/detail.png" border="0"
+                                                                     alt="Details"></a></div>
         </li>
     </c:forEach>
 </ul>

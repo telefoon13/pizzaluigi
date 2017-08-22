@@ -12,10 +12,10 @@ public class PizzaRepository {
 	private static final Map<Long, pizza> PIZZAS = new ConcurrentHashMap<>();
 
 	static {
-		PIZZAS.put(12L, new pizza(12, "Prosciutto", BigDecimal.valueOf(5), true));
-		PIZZAS.put(14L, new pizza(14, "Margherita", BigDecimal.valueOf(4), false));
-		PIZZAS.put(17L, new pizza(17, "Calzone", BigDecimal.valueOf(7), true));
-		PIZZAS.put(24L, new pizza(24, "Fungi & Olive", BigDecimal.valueOf(5), false));
+		PIZZAS.put(1L, new pizza(1, "Prosciutto", BigDecimal.valueOf(5), true));
+		PIZZAS.put(2L, new pizza(2, "Margherita", BigDecimal.valueOf(4), false));
+		PIZZAS.put(3L, new pizza(3, "Calzone", BigDecimal.valueOf(4), true));
+		PIZZAS.put(4L, new pizza(4, "Fungi & Olive", BigDecimal.valueOf(6), false));
 	}
 
 

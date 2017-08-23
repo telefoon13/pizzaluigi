@@ -27,6 +27,8 @@
     <dd>${pizzaToevoegenRequests}</dd>
     <dt>Headers</dt>
     <dd>${headersRequests}</dd>
+    <dt>Identificatie</dt>
+    <dd>${identificatieRequests}</dd>
 
 </dl>
 </body>

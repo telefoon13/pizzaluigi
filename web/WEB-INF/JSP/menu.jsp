@@ -9,8 +9,8 @@
             <li><a href="<c:url value="/pizzas/tussenprijzen.htm"/>">Pizza's tussen prijzen</a></li>
             <li><a href="<c:url value="/pizzas/voorkeuren.htm"/>">Voorkeur pizza's</a></li>
             <li><a href="<c:url value="/pizzas/toevoegen.htm"/>">Pizza toevoegen</a></li>
-            <li><a href="<c:url value="/identificatie.htm"/>">Indentificatie</a></li>
             <li><a href="<c:url value="/headers.htm"/>">Header</a></li>
+            <li><a href="<c:url value="/identificatie.htm"/>">Indentificatie</a></li>
             <li><a href="<c:url value="/pizzas/bestellen.htm"/>">Bestellen</a></li>
         </ul>
     </nav>

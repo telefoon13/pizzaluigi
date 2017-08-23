@@ -11,7 +11,8 @@
 <c:import url="/WEB-INF/JSP/menu.jsp"/>
 <h1>Identificatie</h1>
 <form method="post" name="identificatieForm">
-    <label>Gebruikersnaam : <input name="gebruikersnaam" value="${gebruikersnaam}" autofocus></label>
+    <label>Gebruikersnaam(in coockie) : <input name="gebruikersnaam" value="${gebruikersnaam}" autofocus></label>
+    <label>Gebruikersnaam(in session) : <input name="gebruikersnaam2" value="${gebruikersnaam2}" autofocus></label>
     <input type="submit" value="Onthoud mij.">
 </form>
 

@@ -26,7 +26,7 @@ public class HeaderServlet extends HttpServlet {
 		browsers.put("msie", "Internet Explorer");
 		browsers.put("trident", "Internet Explorer");
 		browsers.put("opera", "Opera");
-		browsers.put("apple", "Safari");
+		browsers.put("safari", "Safari");
 	}
 
 	@Override

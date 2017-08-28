@@ -29,7 +29,10 @@
     <dd>${headersRequests}</dd>
     <dt>Identificatie</dt>
     <dd>${identificatieRequests}</dd>
-
+    <dt></dt>
+    <dd></dd>
+    <dt>Aantal mandjes</dt>
+    <dd>${aantalMandjes}</dd>
 </dl>
 </body>
 </html>

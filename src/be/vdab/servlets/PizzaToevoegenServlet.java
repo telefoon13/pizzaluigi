@@ -3,6 +3,7 @@ package be.vdab.servlets;
 import be.vdab.entities.pizza;
 import be.vdab.repositories.PizzaRepository;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -24,7 +26,12 @@ public class PizzaToevoegenServlet extends HttpServlet {
 	private static final String VIEW = "/WEB-INF/JSP/pizzatoevoegen.jsp";
 	private static final String REDIRECT_URL = "%s/pizzas.htm";
 	private static final String PIZZATOEVOEGEN_REQUESTS = "pizzaToevoegenRequests";
-	private final PizzaRepository pizzaRepository = new PizzaRepository();
+	private final transient PizzaRepository pizzaRepository = new PizzaRepository();
+
+	@Resource(name = PizzaRepository.JNDI_NAME)
+	void setDataSource(DataSource dataSource) {
+		pizzaRepository.setDataSource(dataSource);
+	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

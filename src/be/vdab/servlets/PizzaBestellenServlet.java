@@ -2,18 +2,21 @@ package be.vdab.servlets;
 
 import be.vdab.repositories.PizzaRepository;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
+
 
 @WebServlet(urlPatterns = "/pizzas/bestellen.htm", name = "PizzaBestellenServlet")
 public class PizzaBestellenServlet extends HttpServlet {
@@ -22,7 +25,12 @@ public class PizzaBestellenServlet extends HttpServlet {
 	private static final String VIEW = "/WEB-INF/JSP/pizzabestellen.jsp";
 	private static final String PIZZABESTELLEN_REQUESTS = "pizzaBestellenRequests";
 	private static final String MANDJE = "mandje";
-	private final PizzaRepository pizzaRepository = new PizzaRepository();
+	private final transient PizzaRepository pizzaRepository = new PizzaRepository();
+
+	@Resource(name = PizzaRepository.JNDI_NAME)
+	void setDataSource(DataSource dataSource) {
+		pizzaRepository.setDataSource(dataSource);
+	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

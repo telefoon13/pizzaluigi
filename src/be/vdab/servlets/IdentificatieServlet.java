@@ -20,8 +20,6 @@ public class IdentificatieServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		request.setCharacterEncoding("UTF-8");
-
 		//Met coockie
 		Cookie cookie = new Cookie("gebruikersnaam", URLEncoder.encode(request.getParameter("gebruikersnaam"), "UTF-8"));
 		cookie.setMaxAge(COOCKIE_MAX_LEEFTIJD);

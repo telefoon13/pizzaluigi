@@ -1,3 +1,4 @@
+CREATE SCHEMA `pizzaluigi`;
 CREATE USER cursist
   IDENTIFIED BY 'cursist';
 GRANT ALL ON pizzaluigi.* TO cursist

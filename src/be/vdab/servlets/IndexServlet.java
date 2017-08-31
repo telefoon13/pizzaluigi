@@ -8,6 +8,9 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @WebServlet(urlPatterns = "/index.htm", name = "IndexServlet")
@@ -32,6 +35,10 @@ public class IndexServlet extends HttpServlet {
 		request.setAttribute("email AdresWebmaster", this.getServletContext().getInitParameter("emailAdresWebmaster"));
 
 		((AtomicInteger) this.getServletContext().getAttribute(INDEX_REQUESTS)).incrementAndGet();
+
+		LocalDateTime nu = LocalDateTime.now();
+		request.setAttribute("nu", nu);
+		request.setAttribute("aantalPizzasVerkocht", 2300000);
 
 		request.getRequestDispatcher(VIEW).forward(request, response);
 	}

@@ -16,7 +16,7 @@ public class IdentificatieServlet extends HttpServlet {
 	private static final String IDENTIFICATIE_REQUESTS = "identificatieRequests";
 	private static final int COOCKIE_MAX_LEEFTIJD = 60 * 30;/*60sec * 30 min = 30min*/
 
-	//GET methode
+	//POST methode
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -33,7 +33,7 @@ public class IdentificatieServlet extends HttpServlet {
 		response.sendRedirect(request.getRequestURI());
 	}
 
-	//POST methode
+	//GET methode
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -58,6 +58,7 @@ public class IdentificatieServlet extends HttpServlet {
 
 		//Bezoekers teller
 		((AtomicInteger) this.getServletContext().getAttribute(IDENTIFICATIE_REQUESTS)).incrementAndGet();
+
 
 		//Request view
 		request.getRequestDispatcher(VIEW).forward(request, response);

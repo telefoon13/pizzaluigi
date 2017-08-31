@@ -21,7 +21,7 @@
 <p>Het is vandaag <fmt:formatDate value="${nuAlsDate}"/></p>
 <dl>
     <dt>Aantal pizza's verkocht</dt>
-    <dd><fmt:formatNumber value="${aantalPizzasVerkocht}"/></dd>
+    <dd><fmt:formatNumber value="${aantalPizzasVerkocht}" type="NUMBER"/></dd>
 </dl>
 <h3>De zaakvoerder :</h3>
 <dl>

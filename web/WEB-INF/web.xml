@@ -23,4 +23,5 @@
         <exception-type>be.vdab.repositories.RepositoryExceptions</exception-type>
         <location>/WEB-INF/JSP/repositoryexception.jsp</location>
     </error-page>
+
 </web-app>

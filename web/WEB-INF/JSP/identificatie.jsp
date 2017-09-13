@@ -11,7 +11,7 @@
 <body>
 <c:import url="/WEB-INF/JSP/taalkiezen.jsp"/>
 <vdab:menu/>
-<h1><fmt:message key="identificatie"/></h1>
+<h1><fmt:message key="identificatie" var="ide"/></h1>
 <form method="post" name="identificatieForm">
     <label><fmt:message key="gebruikersnaam"/>(coockie) : <input name="gebruikersnaam" value="${gebruikersnaam}"
                                                                  autofocus></label>
